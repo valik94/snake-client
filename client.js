@@ -10,23 +10,11 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log("my snake is connected");
-    setInterval(() => {
-    conn.write("Move: up")
-    }, 150);(() => {
-    conn.write("Move: right")
-    }, 200);(() => { 
-      conn.write("Move: down")
-    }, 300);(() => { 
-      conn.write("Move: left")
-    }, 500);
- 
-    });
-    //setTimeout(function(){ conn.write("Move: up"); }, 3000);
     conn.write('Name: Val')
     // code that does something when the connection is first established
 
-
   return conn;
-};
+});
+}
 
 module.exports = {connect}
